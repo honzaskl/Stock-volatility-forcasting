@@ -1,1 +1,1 @@
-# Stock-volatility-forcasting
+This project created by Jan Sklenička and Sebastian Černý analyzes and compares the performance of various volatility models in forecasting the realized volatility of Andeavor (ticker: ANDV). The aim is to assess both in-sample and out-of-sample predictive accuracy using classical and modern approaches that incorporate higher-order moments and conditional heteroskedasticity.
