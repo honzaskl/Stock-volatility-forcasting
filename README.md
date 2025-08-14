@@ -1,26 +1,44 @@
-This project created by Jan Sklenička and Sebastian Černý analyzes and compares the performance of various volatility models in forecasting the realized volatility of Andeavor (ticker: ANDV). The aim is to assess both in-sample and out-of-sample predictive accuracy using classical and modern approaches that incorporate higher-order moments and conditional heteroskedasticity.
+# Stock Volatility Forecasting (R)
 
-Models Implemented
-AR(1) and HAR models
+**Authors:** Jan Sklenička & Sebastian Černý
 
-HAR models with realized semivariance, skewness, and kurtosis
+This project analyzes and compares the performance of several volatility models in forecasting the **realized volatility** of **Andeavor (ANDV)**. The goal is to assess **in-sample** and **out-of-sample** predictive accuracy using both classical time-series models and modern approaches that incorporate higher-order moments and conditional heteroskedasticity.
 
-GARCH(1,1) and Realized GARCH
+---
 
-Forecast evaluation using MAE, MSE, Diebold–Mariano tests, and Mincer–Zarnowitz regressions
+## Models Implemented
+- **AR(1)** and **HAR** models  
+- **HAR** variants with **realized semivariance**, **skewness**, and **kurtosis**  
+- **GARCH(1,1)** and **Realized GARCH**  
+- Forecast evaluation using **MAE**, **MSE**, **Diebold–Mariano tests**, and **Mincer–Zarnowitz regressions**
 
-Methodology
-Data Preparation – Daily returns and realized volatility from high-frequency intraday data.
+---
 
-Model Estimation – Fit models on the in-sample period.
+## Methodology
+1. **Data Preparation** – Daily returns and realized volatility constructed from high-frequency intraday data.  
+2. **Model Estimation** – Fit candidate models on the in-sample period.  
+3. **Forecasting** – Produce 1-step-ahead forecasts via **expanding** and **rolling** windows.  
+4. **Evaluation** – Compare models statistically and visually across the full forecast horizon.
 
-Forecasting – Expanding and rolling window procedures.
+---
 
-Evaluation – Statistical and visual comparison of forecast accuracy.
+## Technology
+- **R**  
+  - Packages: `forecast`, `rugarch`, `highfrequency`, `xts`, `zoo`
+- Realized measures computed from intraday price data
 
-Technology
-R (packages: forecast, rugarch, highfrequency, xts, zoo)
+> **Reproducibility (R)**
+> ```r
+> install.packages(c("forecast","rugarch","highfrequency","xts","zoo"))
+> # Open the main script / notebook and run sections in order:
+> # 1) Data prep  2) In-sample fit  3) Forecasts  4) Evaluation
+> ```
 
-High-frequency realized measures computed from intraday price data
+---
 
-Relevance
+## Relevance
+Volatility forecasting is central to **risk assessment**, **derivative pricing**, and **portfolio construction**. The pipeline here—realized measures, multiple model classes, and rigorous forecast evaluation—provides a practical template for applying volatility models to real markets.
+
+---
+
+## Repository Structure (suggested)
