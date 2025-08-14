@@ -33,12 +33,3 @@ This project analyzes and compares the performance of several volatility models 
 > # Open the main script / notebook and run sections in order:
 > # 1) Data prep  2) In-sample fit  3) Forecasts  4) Evaluation
 > ```
-
----
-
-## Relevance
-Volatility forecasting is central to **risk assessment**, **derivative pricing**, and **portfolio construction**. The pipeline here—realized measures, multiple model classes, and rigorous forecast evaluation—provides a practical template for applying volatility models to real markets.
-
----
-
-## Repository Structure (suggested)
